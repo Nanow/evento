@@ -1,5 +1,5 @@
-import 'package:evento/screens/olamundo_screen.dart';
-import 'package:evento/screens/tutorial1_screen.dart';
+import 'package:evento/apps/ola_mundo/olamundo_screen.dart';
+import 'package:evento/apps/tutorial1/tutorial1_screen.dart';
 import 'package:flutter/material.dart';
 
 class CustomDrawerWidget extends StatelessWidget {
