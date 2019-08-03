@@ -1,5 +1,6 @@
 import 'package:evento/apps/ola_mundo/olamundo_screen.dart';
 import 'package:evento/apps/tutorial1/tutorial1_screen.dart';
+import 'package:evento/apps/tutorial2/screens/locais_list/locais_list_screen.dart';
 import 'package:flutter/material.dart';
 
 class CustomDrawerWidget extends StatelessWidget {
@@ -19,7 +20,13 @@ class CustomDrawerWidget extends StatelessWidget {
             onTap: () {
               _changePage(context, Tutorial1Screen());
             },
-          )
+          ),
+          ListTile(
+            title: Text('Tutorial 2'),
+            onTap: () {
+              _changePage(context, LocaisListScreen());
+            },
+          ),
         ],
       ),
     );

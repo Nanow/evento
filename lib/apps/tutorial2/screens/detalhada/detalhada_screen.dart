@@ -1,16 +1,24 @@
+import 'package:evento/apps/tutorial2/model/local.dart';
 import 'package:flutter/material.dart';
 
-class Tutorial1Screen extends StatefulWidget {
+class DatalhadaScreen extends StatefulWidget {
+  final Local local;
+
+  const DatalhadaScreen({Key key, this.local}) : super(key: key);
+
   @override
-  _Tutorial1ScreenState createState() => _Tutorial1ScreenState();
+  _DatalhadaScreenState createState() => _DatalhadaScreenState(this.local);
 }
 
-class _Tutorial1ScreenState extends State<Tutorial1Screen> {
+class _DatalhadaScreenState extends State<DatalhadaScreen> {
   bool eFavorito = false;
+
+  final Local local;
+
+  _DatalhadaScreenState(this.local);
 
   @override
   Widget build(BuildContext context) {
-    print('builda');
     return Scaffold(
       appBar: AppBar(
         title: Text('Tutorial 1'),
@@ -18,9 +26,9 @@ class _Tutorial1ScreenState extends State<Tutorial1Screen> {
       body: ListView(
         children: <Widget>[
           Hero(
-            tag: 'img',
+            tag: this.local.hashCode,
             child: Image.network(
-              'https://raw.githubusercontent.com/flutter/website/master/examples/layout/lakes/step6/images/lake.jpg',
+              this.local.imagem,
               height: 200,
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
@@ -45,12 +53,7 @@ class _Tutorial1ScreenState extends State<Tutorial1Screen> {
     return Container(
       padding: const EdgeInsets.all(32),
       child: Text(
-        'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese '
-        'Alps. Situated 1,578 meters above sea level, it is one of the '
-        'larger Alpine Lakes. A gondola ride from Kandersteg, followed by a '
-        'half-hour walk through pastures and pine forest, leads you to the '
-        'lake, which warms to 20 degrees Celsius in the summer. Activities '
-        'enjoyed here include rowing, and riding the summer toboggan run.',
+        this.local.descricao,
         textAlign: TextAlign.justify,
         softWrap: true,
       ),
@@ -71,7 +74,7 @@ class _Tutorial1ScreenState extends State<Tutorial1Screen> {
                 Container(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Text(
-                    'Oeschinen Lake Campground',
+                    this.local.nome,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
