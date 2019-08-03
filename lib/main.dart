@@ -1,3 +1,4 @@
+import 'package:evento/apps/tutorial3/screens/food_list.dart';
 import 'package:evento/widgets/custom_drawer_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: FoodList(),
     );
   }
 }
