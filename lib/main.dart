@@ -1,4 +1,5 @@
-import 'package:evento/apps/tutorial3/screens/food_list.dart';
+import 'package:evento/apps/ola_mundo/olamundo_screen.dart';
+import 'package:evento/apps/tutorial3/screens/food_list_screen.dart';
 import 'package:evento/widgets/custom_drawer_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FoodList(),
+      home: MyHomePage(
+        title: "É tudo Widget",
+      ),
     );
   }
 }
@@ -55,12 +58,13 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'Você precionou ou botão deste tanto de vezes:',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
+            if (_counter > 9) Text('Se acalme, já pode parar de apertar')
           ],
         ),
       ),
