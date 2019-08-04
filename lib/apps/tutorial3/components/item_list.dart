@@ -1,4 +1,5 @@
 import 'package:evento/apps/tutorial3/models/item.dart';
+import 'package:evento/apps/tutorial3/screens/food_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class ItemList extends StatelessWidget {
@@ -11,9 +12,21 @@ class ItemList extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        Image.network(
-          item.image,
-          height: 75,
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => FoodDetailScreen(item: this.item)),
+            );
+          },
+          child: Hero(
+            tag: this.item.hashCode,
+            child: Image.network(
+              item.image,
+              height: 75,
+            ),
+          ),
         ),
         Expanded(
           child: Padding(

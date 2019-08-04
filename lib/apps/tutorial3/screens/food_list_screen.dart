@@ -89,7 +89,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
                 child: Row(
                   children: <Widget>[
                     Text(
-                      'Healthy ',
+                      'Ô lá em ',
                       style: TextStyle(
                           fontSize: 22,
                           color: Colors.white,
@@ -97,7 +97,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      'Food',
+                      'Casa',
                       style: TextStyle(
                           fontSize: 22,
                           color: Colors.white,
