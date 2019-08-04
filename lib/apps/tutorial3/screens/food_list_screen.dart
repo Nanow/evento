@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:evento/apps/tutorial3/components/item_list.dart';
 import 'package:evento/apps/tutorial3/models/item.dart';
 import 'package:flutter/material.dart';
@@ -17,18 +18,25 @@ class _FoodListScreenState extends State<FoodListScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            Container(
-              width: 75,
-              height: 60,
-              margin: EdgeInsets.all(6),
-              decoration: BoxDecoration(
-                border: Border.all(width: 1, color: Colors.grey),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(10),
-                ),
+            Badge(
+              badgeContent: Text(
+                '3',
+                style: TextStyle(color: Colors.white, fontSize: 14),
               ),
-              child: Icon(
-                Icons.shopping_cart,
+              position: BadgePosition.topRight(right: 1, top: -0.1),
+              child: Container(
+                width: 75,
+                height: 60,
+                margin: EdgeInsets.all(6),
+                decoration: BoxDecoration(
+                  border: Border.all(width: 1, color: Colors.grey),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                ),
+                child: Icon(
+                  Icons.shopping_cart,
+                ),
               ),
             ),
             Container(
