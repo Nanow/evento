@@ -53,7 +53,7 @@ class _FoodDetailScreenState extends State<FoodDetailScreen> {
                 Center(
                   child: Hero(
                     tag: this.item.hashCode,
-                    child: Image.network(
+                    child: Image.asset(
                       item.image,
                       height: 200,
                     ),

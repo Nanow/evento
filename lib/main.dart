@@ -1,5 +1,3 @@
-import 'package:evento/apps/ola_mundo/olamundo_screen.dart';
-import 'package:evento/apps/tutorial3/screens/food_list_screen.dart';
 import 'package:evento/widgets/custom_drawer_widget.dart';
 import 'package:flutter/material.dart';
 

@@ -122,20 +122,34 @@ class _FoodListScreenState extends State<FoodListScreen> {
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(80),
                 ),
-                child: ListView.builder(
+                child: ListView(
                   padding:
                       EdgeInsets.only(left: 32, top: 32, right: 16, bottom: 16),
                   physics: BouncingScrollPhysics(),
-                  itemCount: 100,
-                  itemBuilder: (BuildContext context, int index) {
-                    return ItemList(
+                  children: <Widget>[
+                    ItemList(
                       item: Item(
                           nome: 'Pizza de Arroz',
                           image:
-                              'https://raw.githubusercontent.com/Nanow/evento/master/assets/food/prato_01.png',
+                          'assets/food/prato_01.png',
                           preco: '25.0'),
-                    );
-                  },
+                    ),
+                    ItemList(
+                      item: Item(
+                          nome: 'Carne ao monte de molho',
+                          image:
+                          'assets/food/prato_01.png',
+                          preco: '15.0'),
+                    ),
+                    ItemList(
+                      item: Item(
+                          nome: 'Arroz com carne',
+                          image:
+                          'assets/food/prato_01.png',
+                          preco: '15.0'),
+                    ),
+
+                  ],
                 ),
               ),
             ),

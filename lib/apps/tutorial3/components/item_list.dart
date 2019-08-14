@@ -22,7 +22,7 @@ class ItemList extends StatelessWidget {
           },
           child: Hero(
             tag: this.item.hashCode,
-            child: Image.network(
+            child: Image.asset(
               item.image,
               height: 75,
             ),

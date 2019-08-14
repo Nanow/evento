@@ -1,4 +1,3 @@
-import 'package:evento/apps/tutorial1/tutorial1_screen.dart';
 import 'package:evento/apps/tutorial2/model/local.dart';
 import 'package:evento/apps/tutorial2/screens/detalhada/detalhada_screen.dart';
 import 'package:flutter/material.dart';
